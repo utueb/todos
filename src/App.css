@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+#go-back-text {
+  color: var(--todo-background-800);
+  font-weight: bold;
+  cursor: pointer;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#todos-empty-header {
+  border-top: 0.4375rem double var(--todo-primary-200);
+  border-bottom: 0.4375rem double var(--todo-primary-200);
+  padding: 1.5rem 3rem;
+  text-transform: uppercase;
+  color: var(--todo-primary-600);
+  font-weight: 200;
+  font-size: 1.5rem;
+  letter-spacing: -0.0313rem;
+  line-height: 1.2;
+  margin: 0 1rem;
+  margin-top: 3rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#todos-empty-header:hover {
+  border-top: 0.4375rem double var(--todo-primary-400);
+  border-bottom: 0.4375rem double var(--todo-primary-400);
+  color: rgb(120 240 100);
+  box-shadow: -0.5rem 2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5),
+    -0.5rem -2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5),
+    0.5rem 2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5),
+    0.5rem -2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5),
+    -0.5rem 2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5) inset,
+    -0.5rem -2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5) inset,
+    0.5rem 2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5) inset,
+    0.5rem -2rem 1.25rem -2.1875rem rgba(0, 255, 0, 0.5) inset;
 }

@@ -1,13 +1,173 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@media (prefers-color-scheme: light) {
+  :root {
+    --todo-text-50: rgb(229, 242, 255);
+    --todo-text-100: rgb(204, 229, 255);
+    --todo-text-200: rgb(153, 202, 255);
+    --todo-text-300: rgb(102, 176, 255);
+    --todo-text-400: rgb(51, 150, 255);
+    --todo-text-500: rgb(0, 123, 255);
+    --todo-text-600: rgb(0, 99, 204);
+    --todo-text-700: rgb(0, 74, 153);
+    --todo-text-800: rgb(0, 49, 102);
+    --todo-text-900: rgb(0, 25, 51);
+    --todo-text-950: rgb(0, 12, 26);
+
+    --todo-background-50: rgb(238, 247, 245);
+    --todo-background-100: rgb(221, 238, 234);
+    --todo-background-200: rgb(187, 221, 213);
+    --todo-background-300: rgb(152, 205, 192);
+    --todo-background-400: rgb(118, 188, 171);
+    --todo-background-500: rgb(84, 171, 151);
+    --todo-background-600: rgb(67, 137, 120);
+    --todo-background-700: rgb(50, 103, 90);
+    --todo-background-800: rgb(34, 68, 60);
+    --todo-background-900: rgb(17, 34, 30);
+    --todo-background-950: rgb(8, 17, 15);
+
+    --todo-primary-50: rgb(232, 252, 242);
+    --todo-primary-100: rgb(210, 249, 230);
+    --todo-primary-200: rgb(165, 243, 204);
+    --todo-primary-300: rgb(120, 237, 179);
+    --todo-primary-400: rgb(74, 232, 153);
+    --todo-primary-500: rgb(29, 226, 128);
+    --todo-primary-600: rgb(23, 181, 102);
+    --todo-primary-700: rgb(18, 135, 77);
+    --todo-primary-800: rgb(12, 90, 51);
+    --todo-primary-900: rgb(6, 45, 26);
+    --todo-primary-950: rgb(3, 23, 13);
+
+    --todo-secondary-50: rgb(242, 242, 242);
+    --todo-secondary-100: rgb(230, 230, 230);
+    --todo-secondary-200: rgb(204, 204, 204);
+    --todo-secondary-300: rgb(179, 179, 179);
+    --todo-secondary-400: rgb(153, 153, 153);
+    --todo-secondary-500: rgb(128, 128, 128);
+    --todo-secondary-600: rgb(102, 102, 102);
+    --todo-secondary-700: rgb(77, 77, 77);
+    --todo-secondary-800: rgb(51, 51, 51);
+    --todo-secondary-900: rgb(26, 26, 26);
+    --todo-secondary-950: rgb(13, 13, 13);
+
+    --todo-accent-50: rgb(229, 248, 255);
+    --todo-accent-100: rgb(204, 241, 255);
+    --todo-accent-200: rgb(153, 228, 255);
+    --todo-accent-300: rgb(102, 214, 255);
+    --todo-accent-400: rgb(51, 201, 255);
+    --todo-accent-500: rgb(0, 187, 255);
+    --todo-accent-600: rgb(0, 150, 204);
+    --todo-accent-700: rgb(0, 112, 153);
+    --todo-accent-800: rgb(0, 75, 102);
+    --todo-accent-900: rgb(0, 37, 51);
+    --todo-accent-950: rgb(0, 19, 26);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --todo-text-50: rgb(0, 12, 26);
+    --todo-text-100: rgb(0, 25, 51);
+    --todo-text-200: rgb(0, 49, 102);
+    --todo-text-300: rgb(0, 74, 153);
+    --todo-text-400: rgb(0, 99, 204);
+    --todo-text-500: rgb(0, 123, 255);
+    --todo-text-600: rgb(51, 150, 255);
+    --todo-text-700: rgb(102, 176, 255);
+    --todo-text-800: rgb(153, 202, 255);
+    --todo-text-900: rgb(204, 229, 255);
+    --todo-text-950: rgb(229, 242, 255);
+
+    --todo-background-50: rgb(8, 17, 15);
+    --todo-background-100: rgb(17, 34, 30);
+    --todo-background-200: rgb(34, 68, 60);
+    --todo-background-300: rgb(50, 103, 90);
+    --todo-background-400: rgb(67, 137, 120);
+    --todo-background-500: rgb(84, 171, 151);
+    --todo-background-600: rgb(118, 188, 171);
+    --todo-background-700: rgb(152, 205, 192);
+    --todo-background-800: rgb(187, 221, 213);
+    --todo-background-900: rgb(221, 238, 234);
+    --todo-background-950: rgb(238, 247, 245);
+
+    --todo-primary-50: rgb(3, 23, 13);
+    --todo-primary-100: rgb(6, 45, 26);
+    --todo-primary-200: rgb(12, 90, 51);
+    --todo-primary-300: rgb(18, 135, 77);
+    --todo-primary-400: rgb(23, 181, 102);
+    --todo-primary-500: rgb(29, 226, 128);
+    --todo-primary-600: rgb(74, 232, 153);
+    --todo-primary-700: rgb(120, 237, 179);
+    --todo-primary-800: rgb(165, 243, 204);
+    --todo-primary-900: rgb(210, 249, 230);
+    --todo-primary-950: rgb(232, 252, 242);
+
+    --todo-secondary-50: rgb(13, 13, 13);
+    --todo-secondary-100: rgb(26, 26, 26);
+    --todo-secondary-200: rgb(51, 51, 51);
+    --todo-secondary-300: rgb(77, 77, 77);
+    --todo-secondary-400: rgb(102, 102, 102);
+    --todo-secondary-500: rgb(128, 128, 128);
+    --todo-secondary-600: rgb(153, 153, 153);
+    --todo-secondary-700: rgb(179, 179, 179);
+    --todo-secondary-800: rgb(204, 204, 204);
+    --todo-secondary-900: rgb(230, 230, 230);
+    --todo-secondary-950: rgb(242, 242, 242);
+
+    --todo-accent-50: rgb(0, 19, 26);
+    --todo-accent-100: rgb(0, 37, 51);
+    --todo-accent-200: rgb(0, 75, 102);
+    --todo-accent-300: rgb(0, 112, 153);
+    --todo-accent-400: rgb(0, 150, 204);
+    --todo-accent-500: rgb(0, 187, 255);
+    --todo-accent-600: rgb(51, 201, 255);
+    --todo-accent-700: rgb(102, 214, 255);
+    --todo-accent-800: rgb(153, 228, 255);
+    --todo-accent-900: rgb(204, 241, 255);
+    --todo-accent-950: rgb(229, 248, 255);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--todos-text-100);
+  text-transform: capitalize;
+}
+input:not([type="checkbox"]),
+textarea {
+  background: var(--todo-text-900) !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--todo-primary-50);
+  border-color: var(--todo-primary-200);
+}
+@font-face {
+  font-family: "ComicSans";
+  src: url("../public/Fonts/LDFComicSans.ttf") format("woff2");
+}
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../public/Fonts/RobotoSlab-VariableFont_wght.ttf") format("woff2");
+}
+body {
+  margin: 0;
+  font-family: "RobotoSlab", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--todo-background-50) !important;
+}
+body,
+#root {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+::selection {
+  color: var(--todo-primary-100);
+  background: var(--todo-background-500);
 }

@@ -1,0 +1,24 @@
+.priority-indicator {
+  background-color: var(--todo-secondary-400);
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.priority-indicator li {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 0.25rem solid;
+}
+.priority-indicator li:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+.priority-level-off {
+  border-color: var(--todo-primary-200) !important;
+}
+.priority-level-on {
+  border-color: var(--todo-primary-700) !important;
+  background-color: var(--todo-primary-200) !important;
+}

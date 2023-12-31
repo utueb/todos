@@ -1,0 +1,33 @@
+.row:has(#header) {
+  background-color: var(--todo-accent-300);
+}
+
+#header button {
+  background-color: var(--todo-primary-300) !important;
+  font-weight: bolder;
+}
+#header button#edit {
+  background-color: var(--todo-accent-500) !important;
+}
+#header button#delete {
+  background-color: var(--bs-danger) !important;
+}
+.add-todo-modal {
+  background-color: var(--todo-primary-800) !important;
+}
+.add-todo-modal.modal-header {
+  background-color: var(--todo-primary-500) !important;
+}
+.add-todo-modal.modal-body textarea {
+  max-height: 9.375rem;
+  height: 5rem;
+  overflow-y: auto;
+}
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+  background: var(--todo-text-900) !important;
+  box-shadow: 0rem 0rem 0.25rem -0.0625rem black;
+}
+.add-todo-modal.modal-footer button {
+  background-color: var(--todo-accent-300);
+}

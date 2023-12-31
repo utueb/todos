@@ -1,0 +1,39 @@
+.todo-heading h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: var(--todo-background-200);
+  padding-right: 0.9rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.todo-heading {
+  background: var(--todo-primary-400);
+}
+.todo-heading:hover:not(header.todo-heading) {
+  background: linear-gradient(
+    var(--todo-primary-400) 81%,
+    var(--todo-background-200) 81%
+  );
+}
+header.todo-heading {
+  background: linear-gradient(
+    var(--todo-primary-400) 59%,
+    var(--todo-background-200) 59%
+  );
+}
+header.todo-heading i {
+  color: var(--todo-primary-500);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.todo-heading .form-check-input {
+  margin: 0;
+  margin-left: 0rem !important;
+  margin-right: 1.25rem;
+}
+
+.todo-heading .todo-linethrough {
+  text-decoration: line-through;
+  color: var(--todo-secondary-400) !important;
+}
