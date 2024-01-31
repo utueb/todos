@@ -4,9 +4,12 @@ import TodoDetails from "./TodoDetails";
 import "./App.css";
 import GoBackText from "./GoBackText";
 
-import { Container, Button } from "react-bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Header } from "./Header";
+import withHeaderProps from "./HOC";
+
+const TodosListPage = withHeaderProps(TodosList);
+const TodoDetailsPage = withHeaderProps(TodoDetails);
+const GoBackTextPage = withHeaderProps(GoBackText);
 
 const initialAddTodoState = {
   date: null,
@@ -92,13 +95,13 @@ export default function RouteComponent() {
     setShowModal(true);
   };
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          index
-          element={
-            <Container fluid className="p-0 gx-0">
-              <Header
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            index
+            element={
+              <TodosListPage
                 handleShowModal={handleShowModal}
                 showModal={showModal}
                 setShowModal={setShowModal}
@@ -106,26 +109,18 @@ export default function RouteComponent() {
                 addTodoState={addTodoState}
                 todos={todos}
                 setTodos={setTodos}
+                removeTodo={removeTodo}
+                handleEdit={handleEdit}
                 resetReducer={resetReducer}
-              >
-                <Button size="lg" className="rounded-0 my-2 mx-3">
-                  add todo
-                </Button>
-              </Header>
-              <TodosList
-                todos={todos}
                 handleTodosCheck={handleTodosCheck}
-                removeTodo={removeTodo}
               />
-            </Container>
-          }
-        />
+            }
+          />
 
-        <Route
-          path="/todos/:todoId"
-          element={
-            <Container fluid className="p-0 gx-0">
-              <Header
+          <Route
+            path="/todos/:todoId"
+            element={
+              <TodoDetailsPage
                 handleShowModal={handleShowModal}
                 showModal={showModal}
                 setShowModal={setShowModal}
@@ -136,29 +131,15 @@ export default function RouteComponent() {
                 removeTodo={removeTodo}
                 handleEdit={handleEdit}
                 resetReducer={resetReducer}
-              >
-                <>
-                  <Button size="lg" className="rounded-0 my-2">
-                    back
-                  </Button>
-                  <Button size="lg" className="rounded-0 my-2" id="edit">
-                    edit
-                  </Button>
-                  <Button size="lg" className="rounded-0 my-2 " id="delete">
-                    delete
-                  </Button>
-                </>
-              </Header>
-              <TodoDetails todos={todos} handleTodosCheck={handleTodosCheck} />
-            </Container>
-          }
-        />
+                handleTodosCheck={handleTodosCheck}
+              />
+            }
+          />
 
-        <Route
-          path="*"
-          element={
-            <Container fluid className="p-0 gx-0">
-              <Header
+          <Route
+            path="*"
+            element={
+              <GoBackTextPage
                 handleShowModal={handleShowModal}
                 showModal={showModal}
                 setShowModal={setShowModal}
@@ -169,18 +150,12 @@ export default function RouteComponent() {
                 removeTodo={removeTodo}
                 handleEdit={handleEdit}
                 resetReducer={resetReducer}
-              >
-                <>
-                  <Button size="lg" className="rounded-0 my-2">
-                    back
-                  </Button>
-                </>
-              </Header>
-              <GoBackText />
-            </Container>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+                handleTodosCheck={handleTodosCheck}
+              />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
